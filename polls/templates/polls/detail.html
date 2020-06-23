@@ -1,0 +1,36 @@
+{% extends "base.html"%}
+{% block content %}
+
+<!--<section>-->
+<!--    <form method = "GET" action="https://google.com/search">-->
+<!--        <input type = "text" name="q">-->
+<!--        <input type = "submit" name="Szukaj">-->
+<!--    </form>-->
+
+<!--</section>-->
+
+
+<section class="possibilities">
+    <p>Możliwe odpowiedzi: </p>
+
+    <form method="POST" action="{% url 'polls:vote' question.id %}">
+        {% csrf_token %}
+        <ul>
+
+            {% for choice in question.choice_set.all %}
+
+            <li>
+                <label>
+                    <input type="radio" value="120" name="choice" required>{{ choice.choice_text }}
+                </label>
+            </li>
+
+            {% endfor %}
+
+        </ul>
+        <input class="submit" type="submit" value="Głosuj">
+    </form>
+</section>
+
+
+{% endblock %}

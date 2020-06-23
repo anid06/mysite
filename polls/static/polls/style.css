@@ -1,0 +1,103 @@
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+body::after {
+  content: "";
+  background: url(layout.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  padding: 50px;
+}
+
+.container {
+  min-height: 50vh;
+  width: 50vw;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translate(-50%);
+
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px 30px;
+}
+
+.container nav a {
+  position: absolute;
+  top: -20px;
+  color: #000000;
+}
+
+h1 {
+  font-size: 25px;
+  border-bottom: dotted;
+  text-shadow: 4px 4px 5px #c18a42;
+}
+
+/* .question-list */
+.question-list h3 a {
+  color: #c18a42;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* .possibilities */
+.possibilities p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.possibilities form ul {
+  padding: 0;
+  display: table;
+  margin: 0 auto;
+}
+
+.possibilities form ul li {
+  list-style-type: none;
+  padding: 0;
+
+}
+
+.possibilities form .submit {
+  width: 80px;
+  height: 40px;
+  background-color: #c18a42;
+  border-style: none;
+  box-shadow: 4px 4px 8px #6d6a67;
+  border-radius: 10px;
+  padding: auto;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-family: inherit;
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+
+.result p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.result ul {
+  padding: 0;
+  display: table;
+  margin: 0 auto;
+}
+
+.result ul li {
+  font-size: 16px;
+  list-style-type: none;
+}
