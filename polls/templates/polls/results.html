@@ -6,7 +6,11 @@
     <p>Wyniki: </p>
     <ul>
         {% for choice in question.choice_set.all %}
-        <li>{{ choice.choice_text }} </b>, głosów: {{ choice.votes }}</li>
+        <li>
+            <span>{{ choice.choice_text }}</span></b>
+            <span>{{ choice.votes }} głosów</span>
+        </li>
+        <div class="progress-bar"></div>
         {% endfor %}
 
     </ul>

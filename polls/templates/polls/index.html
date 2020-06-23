@@ -4,7 +4,8 @@
 
 <section class="question-list">
     <!--    <h3><a href="/polls/{{question.id}}">{{question.question_text}}</a></h3>-->
-    <h3><a href="{% url 'polls:detail' question.id %}">{{question.question_text}}</a></h3>
+    <h3><i class="far fa-question-circle"></i>&nbsp;
+        <a href="{% url 'polls:detail' question.id %}">{{question.question_text}}</a></h3>
 </section>
 
 {% endfor %}
